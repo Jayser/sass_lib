@@ -1,0 +1,348 @@
+/* 
+ * ===  ===  ===  === LAYOUT ===  ===  ===  ===
+ */
+.pull-left {float: left;}
+.pull-right{float: right;}
+.overflow-hidden{overflow: hidden;}
+
+.pos-absolute{position: absolute;}
+.pos-relative{position: relative;}
+.pos-static{position: static ;}
+.pos-fixed{position: fixed ;}
+
+.type-file{
+  position: absolute;
+  top:0;
+  left:0;
+  z-index: 5;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  cursor: pointer;
+}
+.cursor-pointer{cursor: pointer;}
+.table-fixed{table-layout: fixed;}
+
+.img-placeholder{
+  display: block;
+  padding: 40px 10px;
+  border: 3px solid #ccc;
+  background: #eee;
+  color: #333;
+  text-align: center;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.5; 
+}
+
+.td-separator{
+  border-bottom: 1px solid #e5e5e5;
+}
+.tb-separator{
+  margin: 15px 0;
+  height: 1px;
+  background-color: #e5e5e5;
+}
+.t-separator{
+  padding-top: 20px;
+  border-top: 1px solid #e5e5e5;
+}
+.b-separator{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+/* 
+ * ===  ===  ===  === LINK ===  ===  ===  ===
+ */
+.link-underline a       {text-decoration: underline;}
+.link-underline a:hover   {text-decoration: none;}
+
+.link-nounderline a     {text-decoration: none;}
+.link-nounderline a:hover   {text-decoration: underline;}
+
+.link-noallunderline a    {text-decoration: none;}
+.link-noallunderline a:hover{text-decoration: none;}
+/* 
+ * ===  ===  ===  === BG ===  ===  ===  ===
+ */
+.bg-white{background-color: #fff;}
+.bg-black{background-color: #000;}
+/* 
+ * ===  ===  ===  === TEXT ===  ===  ===  ===
+ */
+/* TEXT SIZE 8-32 STEP 1*/
+@for $i from 8 through 32{
+  .text-#{$i} { font-size: 0px + $i; }
+}
+
+/* LINE HEIGHT 10-25 STEP 1*/
+@for $i from 10 through 25{
+  .line-#{$i} { line-height: 0px + $i; }
+}
+
+/* LINE HEIGHT 30-100 STEP 1*/
+@for $i from 0 through 7{
+  .line-#{30 + (10*$i)} { line-height: 30px + (10*$i); }
+}
+
+.text-bold  {font-weight: bold;  }
+.text-normal{font-weight: normal;}
+
+.text-break {
+  display: block;
+  white-space: pre;
+  white-space: pre-wrap;
+  white-space: pre-line;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -hp-pre-wrap;
+  word-wrap: break-word;
+}
+
+.text-underline   {text-decoration: underline;}
+.text-nounderline {text-decoration: none;     }
+.text-capitalize  {text-transform: capitalize;}
+
+.text-left   {text-align: left;}
+.text-center {text-align: center;}
+.text-right  {text-align: right;}
+.text-justify{text-align: justify;}
+
+.text-top    {vertical-align: top;}
+.text-middle {vertical-align: middle;}
+
+.text-black  {color: black;}
+.text-white  {color: white;}
+.text-red    {color: red; }
+
+.text-grey      {color: #666;}
+.text-dark_grey {color: #333;}
+.text-light_grey{color: #999;}
+/* 
+ * ===  ===  ===  === DIMENSION ===  ===  ===  ===
+ */
+/* WIDTH 0-5 STEP 1*/
+@for $i from 0 through 5{
+  .w-#{$i} { width: 0px + $i; }
+}
+/* WIDTH 10-300 STEP 10 */
+@for $i from 0 through 29{
+  .w-#{10 + ( $i * 10 )} { width: 10px + ( $i * 10 ); }
+}
+
+/* WIDTH PERCENT 0-5 STEP 1*/
+@for $i from 1 through 5{
+  .wp-#{$i} { width: 0% + $i; }
+}
+
+/* WIDTH PERCENT 10-300 STEP 10 */
+@for $i from 0 through 9{
+  .wp-#{10 + ( $i * 10 )} { width: 10% + ( $i * 10 ); }
+}
+
+/* HEIGHT 0-5 STEP 1*/
+@for $i from 0 through 5{
+  .h-#{$i} { height: 0px + $i; }
+}
+/* HEIGHT 10-300 STEP 10 */
+@for $i from 0 through 29{
+  .h-#{10 + ( $i * 10 )} { height: 10px + ( $i * 10 ); }
+}
+
+/* HEIGHT PERCENT 0-5 STEP 1*/
+@for $i from 1 through 5{
+  .hp-#{$i} { height: 0% + $i; }
+}
+
+/* HEIGHT PERCENT 10-300 STEP 10 */
+@for $i from 0 through 9{
+  .hp-#{10 + ( $i * 10 )} { height: 10% + ( $i * 10 ); }
+}
+
+/* PADDING OFFSET ALL 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-inall-#{$i} { padding: 0px + $i; }
+}
+
+/* PADDING OFFSET ALL 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-inall-#{10 + (5*$i)} { padding: 10px + (5*$i); }
+}
+
+/* PADDING OFFSET LEFT 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-inl-#{$i} { padding-left: 0px + $i; }
+}
+
+/* PADDING OFFSET LEFT 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-inl-#{10 + (5*$i)} { padding-left: 10px + (5*$i); }
+}
+
+/* PADDING OFFSET RIGHT 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-inr-#{$i} { padding-right: 0px + $i; }
+}
+
+/* PADDING OFFSET RIGHT 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-inr-#{10 + (5*$i)} { padding-right: 10px + (5*$i); }
+}
+
+/* PADDING OFFSET LEFT RIGHT 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-inlr-#{$i} {
+    padding-left: 0px + $i;
+    padding-right: 0px + $i;
+  }
+}
+
+/* PADDING OFFSET LEFT RIGHT 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-inlr-#{10 + (5*$i)} {
+    padding-left: 10px + (5*$i);
+    padding-right: 10px + (5*$i);
+  }
+}
+
+/* PADDING OFFSET TOP BOTTOM 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-intb-#{$i} {
+    padding-top: 0px + $i;
+    padding-bottom: 0px + $i;
+  }
+}
+
+/* PADDING OFFSET TOP BOTTOM 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-intb-#{10 + (5*$i)} {
+    padding-top: 10px + (5*$i);
+    padding-bottom: 10px + (5*$i);
+  }
+}
+
+/* MARGIN OFFSET ALL 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-all-#{$i} { margin: 0px + $i; }
+}
+
+/* MARGIN OFFSET ALL 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-all-#{10 + (5*$i)} { margin: 10px + (5*$i); }
+}
+
+/* MARGIN OFFSET LEFT 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-l-#{$i} { margin-left: 0px + $i; }
+}
+
+/* MARGIN OFFSET LEFT 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-l-#{10 + (5*$i)} { margin-left: 10px + (5*$i); }
+}
+
+/* MARGIN OFFSET RIGHT 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-r-#{$i} { margin-right: 0px + $i; }
+}
+
+/* MARGIN OFFSET RIGHT 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-r-#{10 + (5*$i)} { margin-right: 10px + (5*$i); }
+}
+
+/* MARGIN OFFSET LEFT RIGHT 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-lr-#{$i} {
+    margin-left: 0px + $i;
+    margin-right: 0px + $i;
+  }
+}
+
+/* MARGIN OFFSET LEFT RIGHT 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-lr-#{10 + (5*$i)} {
+    margin-left: 10px + (5*$i);
+    margin-right: 10px + (5*$i);
+  }
+}
+
+/* MARGIN OFFSET TOP BOTTOM 0-5 STEP 1*/
+@for $i from 0 through 5 {
+  .offset-tb-#{$i} {
+    margin-top: 0px + $i;
+    margin-bottom: 0px + $i;
+  }
+}
+
+/* MARGIN OFFSET TOP BOTTOM 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-tb-#{10 + (5*$i)} {
+    margin-top: 10px + (5*$i);
+    margin-bottom: 10px + (5*$i);
+  }
+}
+
+/* PADDING OFFSET PERCENT ALL 0-5 STEP 1*/
+@for $i from 1 through 5 {
+  .offset-inall-#{$i}p { padding: 0% + $i; }
+}
+
+/* PADDING OFFSET PERCENT ALL 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-inall-#{10 + (5*$i)}p { padding: 10% + (5*$i); }
+}
+
+/* PADDING OFFSET PERCENT LEFT 0-5 STEP 1*/
+@for $i from 1 through 5 {
+  .offset-inl-#{$i}p { padding-left: 0% + $i; }
+}
+
+/* PADDING OFFSET PERCENT LEFT 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-inl-#{10 + (5*$i)}p { padding-left: 10% + (5*$i); }
+}
+
+/* PADDING OFFSET PERCENT RIGHT 0-5 STEP 1*/
+@for $i from 1 through 5 {
+  .offset-inr-#{$i}p { padding-right: 0% + $i; }
+}
+/* PADDING OFFSET PERCENT RIGHT 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-inr-#{10 + (5*$i)}p { padding-right: 10% + (5*$i); }
+}
+
+/* PADDING OFFSET PERCENT LEFT RIGHT 0-5 STEP 1*/
+@for $i from 1 through 5 {
+  .offset-inlr-#{$i}p {
+    padding-left: 0% + $i;
+    padding-right: 0% + $i;
+  }
+}
+
+/* PADDING OFFSET PERCENT LEFT RIGHT 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-inlr-#{10 + (5*$i)}p {
+    padding-left: 10% + (5*$i);
+    padding-right: 10% + (5*$i);
+  }
+}
+
+/* PADDING OFFSET PERCENT TOP BOTTOM 0-5 STEP 1*/
+@for $i from 1 through 5 {
+  .offset-intb-#{$i}p {
+    padding-top: 0% + $i;
+    padding-bottom: 0% + $i;
+  }
+}
+
+/* PADDING OFFSET PERCENT TOP BOTTOM 10-100 STEP 5 */
+@for $i from 0 through 18 {
+  .offset-intb-#{10 + (5*$i)}p {
+    padding-top: 10% + (5*$i);
+    padding-bottom: 10% + (5*$i);
+  }
+}
